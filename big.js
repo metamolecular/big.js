@@ -1,6 +1,5 @@
 /* big.js v3.1.3 https://github.com/MikeMcl/big.js/LICENCE */
-;(function (global) {
-    'use strict';
+'use strict';
 
 /*
   big.js v3.1.3
@@ -1125,18 +1124,4 @@
 
     Big = bigFactory();
 
-    //AMD.
-    if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return Big;
-        });
-
-    // Node and other CommonJS-like environments that support module.exports.
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = Big;
-
-    //Browser.
-    } else {
-        global.Big = Big;
-    }
-})(this);
+    module.exports = Big;
